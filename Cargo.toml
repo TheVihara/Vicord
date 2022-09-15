@@ -1,0 +1,29 @@
+[package]
+name = "Vicord"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.57"
+dotenv = "0.15.0"
+
+[dependencies.serenity]
+version = "0.11.5"
+features = ["voice"]
+
+[dependencies.songbird]
+git = "https://github.com/serenity-rs/songbird.git"
+branch = "next"
+
+[dependencies.tokio]
+version = "1.20"
+features = ["macros", "rt-multi-thread"]
+
+[dependencies.rand]
+version = "0.8.5"
+
+[dependencies.sqlx]
+version = "0.6.2"
+features = ["runtime-tokio-rustls", "macros", "mysql"]
